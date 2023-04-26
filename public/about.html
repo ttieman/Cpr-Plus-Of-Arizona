@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - CPR Business</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +20,8 @@
             line-height: 1.6;
             background-color: #f4f4f4;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
             min-height: 100vh;
         }
 
@@ -43,15 +44,58 @@
             margin-bottom: 0.5rem;
             color: #666;
         }
+
+        footer {
+            background-color: #0a2e5d;
+            color: white;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #75a7f2;
+        }
+
+        .copyright {
+            font-size: 14px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container my-5">
         <h1>CPR Business</h1>
         <p>Coming Soon!</p>
         <p>Stay tuned for more information about our CPR classes, certification, and training services.</p>
     </div>
+    <footer class="text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item me-4"><a class="link-light" href="#">Home</a></li>
+                        <li class="list-inline-item me-4"><a class="link-light" href="#">CPR</a></li>
+                        <li class="list-inline-item me-4"><a class="link-light" href="#">ASMAF</a></li>
+                        <li class="list-inline-item"><a class="link-light" href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline social-icons mb-2">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="mx-3"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-muted copyright mb-0">Copyright © 2023 Brand</p>
+        </div>
+    </footer>
 </body>
 
 </html>
