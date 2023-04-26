@@ -1,10 +1,10 @@
 .carousel-image-container {
     height: 500px;
-    width: 100%;
+    max-width: 100%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    display: flex;
 }
 
 nav {
@@ -14,7 +14,7 @@ nav {
 
 .carousel-image-container img {
     max-height: 100%;
-    max-width: 100%;
+    max-width: auto;
     z-index: -1;
 }
 
@@ -34,4 +34,8 @@ nav {
         border-radius: 0;
         top: 0;
     }
+}
+
+.carousel-size {
+    height:
 }
