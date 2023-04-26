@@ -1,0 +1,37 @@
+.carousel-image-container {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    z-index: 1;
+}
+
+
+.carousel-image-container img {
+    max-height: 100%;
+    max-width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    body {
+        margin-top: 50px;
+    }
+
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        top: 0;
+    }
+}
