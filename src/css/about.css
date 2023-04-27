@@ -1,0 +1,7 @@
+.smaller-text {
+    font-size: 2rem !important;
+}
+
+p .smaller-text {
+    font-size: 3rem !important;
+}
