@@ -36,6 +36,31 @@ nav {
     }
 }
 
-.carousel-size {
-    height:
+
+.footer {
+  background-color: #343a40 !important; 
+  padding: 2rem 0;
+  color: #fff;
+}
+
+.footer .smaller-text {
+  font-size: 0.9rem !important;
+  /* Adjust the value as needed */
+}
+
+#contact-footer {
+  font-size: .8rem !important;
+}
+
+.smaller-text {
+  font-size: 2rem !important;
+}
+
+p .smaller-text {
+  font-size: 3rem !important;
+}
+
+.inline-footer-list {
+  display: inline-block !important;
+  margin: 0 1rem !important;
 }
