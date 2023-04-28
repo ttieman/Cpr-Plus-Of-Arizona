@@ -38,10 +38,36 @@
             display: inline-block !important;
             margin: 0 1rem !important;
         }
+        
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand" href="">Cpr Plus of Arizona</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cprClasses">CPR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AMSAF">AMSAF</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <hl>this is the about page!</hl>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -92,6 +118,25 @@
         </div>
     </footer>
     <!-- Footer end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+    <script>
+        $(document).ready(function() {
+            // Get the current page's URL
+            const currentPage = window.location.href;
+        
+            // Iterate through each nav-link
+            $(".nav-link").each(function() {
+                // Check if the nav-link's href attribute is included in the current page's URL
+                if (currentPage.includes($(this).attr("id"))) {
+                    // Add the 'active' class to the parent 'nav-item'
+                    $(this).parent().addClass("active");
+                }
+            });
+        });
+        </script>
 </body>
 
 </html>
