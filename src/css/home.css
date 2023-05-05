@@ -1,21 +1,12 @@
-.carousel-image-container {
-    height: 500px;
-    max-width: 100%;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
-    display: flex;
-}
+
 
 nav {
     z-index: 1;
 }
 
 
-.carousel-image-container img {
-    max-height: 100%;
-    max-width: auto;
-    z-index: -1;
+.carousel-item {
+  height: 300px;
 }
 
 
