@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/AMSAF', (req, res) => {
+app.get('/ASM', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'AMSAF.html'));
 });
 
