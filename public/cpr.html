@@ -31,6 +31,13 @@ href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swa
 rel="stylesheet"
 />
 <!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.2/js/mdb.min.js"
+  integrity="sha512-yrG0pGX6fY1eNNkM6NmELP8ZzGNwyfdwtJQ2zBEk9yLxRBrdFYuyRRlMVJ7Znb+hnZPLV8cSjJNWzB7T/CXH1A=="
+  crossorigin="anonymous"
+></script>
+
 
 <link
       rel="stylesheet"
@@ -68,15 +75,19 @@ rel="stylesheet"
           display: inline-block !important;
           margin: 0 1rem !important;
       }
+
+      .navcolor {
+        
+      }
       
   </style>
 
     <title>CPR Plus of Arizona</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid d-flex justify-content-between">
+  <body  style="background-color: #F2F3F4">
+    <nav class="navbar navbar-expand-lg navbar-light navcolor" style="background-color: #003049;">
+      <div class="container-fluid d-flex justify-content-between ">
         <a class="navbar-brand" href="">
           <img src="./assets/logo.png" alt="" width="177" height="44" class="d-inline-block align-text-top">
           </a>
@@ -91,19 +102,19 @@ rel="stylesheet"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse " id="navbarNav" >
+          <ul class="navbar-nav ml-auto" >
             <li class="nav-item">
-              <a class="nav-link" href="/home">Home</a>
+              <a class="nav-link " style="color: white" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/cpr">CPR</a>
+              <a class="nav-link active" style="color: white" href="/cpr">CPR</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/AMSAF">AMSAF</a>
+              <a class="nav-link"  style="color: white" href="/AMSAF">Accident Scene</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" style="color: white" href="/about">About</a>
             </li>
           </ul>
         </div>
@@ -112,15 +123,15 @@ rel="stylesheet"
 
     
 
-    <section class="container text-center pt-3 mt-3 card" style="">
+    <section class="container text-center pt-3 mt-3 card shadow" >
       <div class="row align-items-center" style="">
-        <div class="col-lg-5 col-xl-5 col-sm-12  mb-4 card d-flex align-items-center justify-content-center">
+        <div class="col-lg-5 col-xl-5 col-sm-12 mx-auto mb-4 card d-flex align-items-center justify-content-center">
           
           <div class="row">
-            <div class="col-sm-2 col-xs-3 d-flex align-items-center justify-content-center">
+            <div class="col-sm-4 col-xs-3 col-3 d-flex align-items-center justify-content-center">
               <img src="./assets/cpr.png" style="width:100%"></img>
             </div>
-            <div class="col-sm-9 col-xs-8">
+            <div class="col-sm-8 col-xs-9 col-9">
           <div class="card-title pt-1 mb-3">Scheduling Class Requirements:</div>
           <small class="w-50">
           <content class=" " >
@@ -138,15 +149,18 @@ rel="stylesheet"
         </div>
         </div>
         </div>
-        <div class="col-lg-6 col-xl-5 col-sm-12 d-flex justify-content-center align-items-center" style="height:100%">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23D50000&ctz=America%2FPhoenix&showNav=0&title=CPR%20test&showPrint=0&showTabs=0&showCalendars=0&src=OGM3NjBiZDgwY2FmZWQ3ZTg0Mzk4YTk0OGI2NTIzM2E5ODliODQ0NWZiNzJhMDQzNGJmYWNmOGZiZDNkZDA1YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548"
-            style="border: solid 1px #777"
-            width="100%"
-            height="300px"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
+        <div class="col-lg-6 col-xl-6 col-sm-12 d-flex justify-content-center align-items-center" style="height:100%">
+          <div class="text-center">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23D50000&ctz=America%2FPhoenix&showNav=0&title=CPR%20test&showPrint=0&showTabs=0&showCalendars=0&src=OGM3NjBiZDgwY2FmZWQ3ZTg0Mzk4YTk0OGI2NTIzM2E5ODliODQ0NWZiNzJhMDQzNGJmYWNmOGZiZDNkZDA1YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548"
+              style="border: solid 1px #777"
+              width="100%"
+              height="300px"
+              frameborder="0"
+              scrolling="no"
+              class="mx-auto rounded"
+            ></iframe>
+          </div>
         </div>
       </div>
       </section>
@@ -154,10 +168,10 @@ rel="stylesheet"
       <div class="row justify-content-center d-flex align-items-center text-center mt-3" >
         
         <!-- Tabs navs -->
-<ul class="nav nav-pills nav-fill" id="ex1" role="tablist">
-  <li class="nav-item" role="presentation">
+<ul class="nav nav-tabs nav-fill" id="ex1" role="tablist">
+  <li class="nav-item mx-2" role="presentation">
     <a
-      class="nav-link active"
+      class="nav-link btn-danger active"
       id="ex2-tab-1"
       data-mdb-toggle="tab"
       href="#ex2-tabs-1"
@@ -167,9 +181,9 @@ rel="stylesheet"
       >Basic Community Cpr Training </a
     >
   </li>
-  <li class="nav-item" role="presentation">
+  <li class="nav-item mx-2" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link btn-danger"
       id="ex2-tab-2"
       data-mdb-toggle="tab"
       href="#ex2-tabs-2"
@@ -179,9 +193,9 @@ rel="stylesheet"
       >HealthCare Provider BLS CPR</a
     >
   </li>
-  <li class="nav-item" role="presentation">
+  <li class="nav-item mx-2" role="presentation">
     <a
-      class="nav-link"
+      class="nav-link btn-danger"
       id="ex2-tab-3"
       data-mdb-toggle="tab"
       href="#ex2-tabs-3"
@@ -197,17 +211,18 @@ rel="stylesheet"
 <!-- Tabs content -->
 <div class="tab-content mb-3" id="ex2-content">
   <div
-    class="tab-pane fade show card active p-3"
+    class="tab-pane fade show card active p-3 shadow"
     id="ex2-tabs-1"
     role="tabpanel"
     aria-labelledby="ex2-tab-1"
+    
   >
     
-    <div class="">
-      <h3 class="mt- mb-3">Basic Community CPR Training</h1>
+    <div class="cpr-banner" >
+      <h3 class="mt- mb-3 ">Basic Community CPR Training</h1>
       <p class="lead small">This class is designed to teach individuals in the community the skills necessary to perform CPR (Cardiopulmonary Resuscitation) on adults, children, and infants. The training is suitable for individuals who have little or no previous experience with CPR.</p>
       <h4>Topics Covered</h4> <br />
-      <div class="row d-flex align-items-center justify-content-center my-2">
+      <div class="row d-flex align-items-center justify-content-center my-2 cpr-hero">
         
         <div class="col-5">
           <img class="image-fluid rounded"  style="width: auto; height: auto; max-height: 15rem;"src="./assets/David CPR top.jpg"/>
