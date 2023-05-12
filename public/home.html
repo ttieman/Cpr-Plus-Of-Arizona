@@ -21,6 +21,27 @@
       max-height: 400px;
       min-height: 22rem;
     }
+
+    /* Fix carousel image stretching */
+    .carousel-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel-image-container {
+      flex: 1;
+    }
+
+    .carousel-image-container .card {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .carousel-image-container .card img {
+      height: auto;
+      width: 100%;
+    }
   </style>
 
   <title>CPR Plus of Arizona</title>
