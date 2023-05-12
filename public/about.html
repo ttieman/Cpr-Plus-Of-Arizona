@@ -89,7 +89,7 @@ ul.no-bullets li {
                 <div class="p-3 h-100">
                     <h2>Our Story</h2>
                     <p>
-                        Welcome to CPR Plus of Arizona, an EMT-owned and operated CPR training provider founded by Mark Laclair, a licensed EMT in Arizona and a retired EMT Intermediate and Level 2 Firefighter with over 14 years of experience in Keene, New Hampshire. Established in 2006, we initially served the community of Keene before migrating to Arizona in 2015 to expand our reach and continue our mission of bringing life-saving CPR training to communities across the state.</p>
+                        Welcome to CPR Plus of Arizona, an EMT-owned and operated CPR training provider founded by Mark Laclair, a licensed EMT in Arizona and a retired EMT Intermediate and Level 2 Firefighter with over 14 years of experience in Swansey, New Hampshire. Established in 2006, we initially served the community of Cheshire County, and southern New Hampshire before migrating to Arizona in 2015 to expand our reach and continue our mission of bringing life-saving CPR training to communities across the state.</p>
                     <p>Our passionate and dedicated team strives to empower individuals with the knowledge and skills they need to save lives in emergency situations. We believe that everyone should have access to quality CPR training, and our flexible approach ensures that we cater to the unique needs of our community. Join us today and become a part of our story as we create a safer, better-prepared world together.</p>
                 </div>
             </div>
@@ -101,19 +101,25 @@ ul.no-bullets li {
             <div class="col-12 col-lg-6 my-3 p-4 card">
                 <h2>Contact Us</h2>
                 <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Desired Class Date</label>
+                    <select class="form-control" id="date">
+                      <!-- Options will be populated here by the script -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
@@ -142,7 +148,7 @@ ul.no-bullets li {
     <div class="outro-section">
         <div class="container">
             <h2 class="text-center">Empower Yourself to Save Lives</h2>
-            <p class="text-center">At CPR Plus of Arizona, we believe that life-saving skills should be accessible to everyone. Our flexible, tailored approach allows us to bring our expertise right to your doorstep. With <strong>Your Class, Your Facility</strong>, we provide customized CPR training at the location and time most convenient for you, ensuring that individuals, organizations, and communities can confidently respond in emergency situations.</p>
+            <p class="text-center">At CPR Plus of Arizona, we believe that life-saving skills should be accessible to everyone. Our flexible, tailored approach allows us to bring our expertise right to your doorstep. With <strong>Your Class, At Your Facility</strong>, we provide customized CPR training at the location and time most convenient for you, ensuring that individuals, organizations, and communities can confidently respond in emergency situations.</p>
             <p class="text-center">Join us today and take the first step towards creating a safer environment for yourself and those around you. Together, we can make a difference and save lives.</p>
         </div>
     </div>
@@ -231,46 +237,70 @@ ul.no-bullets li {
       </div>
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script type="text/javascript">
-        emailjs.init("GvWp1giDLQJTZaPPV");
-        document.addEventListener('DOMContentLoaded', function() {
-          const form = document.getElementById('contact-form');
-          
-          if (form) {
-            form.addEventListener('submit', function(event) {
-              event.preventDefault();
-      
-              const name = document.getElementById('name').value;
-              const email = document.getElementById('email').value;
-              const message = document.getElementById('message').value;
-      
-              // Check if any fields are empty
-              if (!name || !email || !message) {
-                alert("Please fill in all fields before submitting.");
-                return;
-              }
-      
-              emailjs.send("service_8sxnbni", "template_s86hnvq", {
-                name: name,
-                email: email,
-                message: message,
-              })
-              .then(function(response) {
-                console.log('Email successfully sent!', response);
-                alert("Email successfully sent!");
-      
-                // Clear the submission area
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('message').value = '';
-              }, function(error) {
-                console.log('Email failed to send...', error);
-                alert("Email failed to send.");
-              });
-            });
-          }
+      function listUpcomingEvents() {
+        fetch('https://www.googleapis.com/calendar/v3/calendars/8c760bd80cafed7e84398a948b65233a989b8445fb72a0434bfacf8fbd3dd05a@group.calendar.google.com/events?key=AIzaSyBFMV-68_3f0O4EvbcjwrjgEejD_VEksTg')
+        .then(response => response.json())
+        .then(data => {
+          var events = data.items;
+          createDropdown(events);
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    
+      function createDropdown(events) {
+        var select = document.getElementById('date');
+        events.forEach(function(event) {
+          var option = document.createElement('option');
+          option.value = new Date(event.start.dateTime).toISOString();
+          option.textContent = event.summary + ' (' + new Date(event.start.dateTime).toLocaleString() + ')';
+          select.appendChild(option);
         });
-      </script>
+      }
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        listUpcomingEvents();
+    
+        const form = document.getElementById('contact-form');
+    
+        if (form) {
+          form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const date = document.getElementById('date').value;
+    
+            if (!name || !email || !message || !date) {
+              alert("Please fill in all fields before submitting.");
+              return;
+            }
+    
+            emailjs.init("GvWp1giDLQJTZaPPV");
+            emailjs.send("service_8sxnbni", "template_s86hnvq", {
+              name: name,
+              email: email,
+              date: date,
+              message: message,
+            })
+            .then(function(response) {
+              console.log('Email successfully sent!', response);
+              alert("Email successfully sent!");
+    
+              document.getElementById('name').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('message').value = '';
+              document.getElementById('date').value = '';
+            }, function(error) {
+              console.log('Email failed to send...', error);
+              alert("Email failed to send.");
+            });
+          });
+        }
+      });
+    </script>
       
     <!-- Footer end -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
