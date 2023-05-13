@@ -1,280 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/home.css" />
+    <style>
+      .service-card {
+        max-width: 400px;
+        margin: 0 auto;
+        max-height: 400px;
+        min-height: 22rem;
+      }
 
-  <link rel="stylesheet" href="./assets/home.css" />
-  <style>
-    .service-card {
-      max-width: 400px;
-      margin: 0 auto;
-      max-height: 400px;
-      min-height: 22rem;
-    }
+      /* Fix carousel image stretching */
+      .carousel-item {
+        display: flex;
+        align-items: center;
+      }
 
-    /* Fix carousel image stretching */
-    .carousel-item {
-      display: flex;
-      align-items: center;
-    }
+      .carousel-image-container {
+        flex: 1;
+      }
 
-    .carousel-image-container {
-      flex: 1;
-    }
+      .carousel-image-container .card {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
 
-    .carousel-image-container .card {
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
+      .carousel-image-container .card img {
+        height: auto;
+        width: 100%;
+      }
+    </style>
 
-    .carousel-image-container .card img {
-      height: auto;
-      width: 100%;
-    }
-  </style>
+    <title>CPR Plus of Arizona</title>
+  </head>
 
-  <title>CPR Plus of Arizona</title>
-</head>
-
-<body  style="background-color: #F2F3F4">
-  <nav class="navbar navbar-expand-lg navbar-light navcolor" style="background-color: #003049;">
-    <div class="container-fluid d-flex justify-content-between">
-      <a class="navbar-brand" href="">
-        <img src="./assets/logo.png" alt="" width="177" height="44" class="d-inline-block align-text-top">
+  <body style="background-color: #f2f3f4">
+    <nav
+      class="navbar navbar-expand-lg navbar-light navcolor"
+      style="background-color: #003049"
+    >
+      <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="">
+          <img
+            src="./assets/logo.png"
+            alt=""
+            width="177"
+            height="44"
+            class="d-inline-block align-text-top"
+          />
         </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNav" >
-        <ul class="navbar-nav ml-auto" >
-          <li class="nav-item">
-            <a class="nav-link " style="color: white" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="color: white" href="/cpr">CPR</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  style="color: white" href="/ASM">Accident Scene</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/about">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container mt-3">
-    <div class="slick-carousel shadow rounded">
-      <div class="carousel-item ">
-        <div class="carousel-image-container ">
-          <div class="card image-fluid  justify-content-center" style="
-                height: 25rem;
-                
-              ">
-            <img class="image-fluid" style=" height: 100%;" src="./assets/Teaching.jpg" />
-          </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: white" href="/cpr"
+                >CPR</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/ASM"
+                >Accident Scene Management</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/about">About</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="carousel-image-container">
-          <div class="card image-fluid  justify-content-center" style="
-                height: 25rem;
-                
-              ">
-            <img class="image-fluid" style=" height: 100%;" src="./assets/infant.jpg" />
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="carousel-image-container">
-          <div class="card image-fluid  justify-content-center" style="
-                height: 25rem;
-                
-              ">
-            <img class="image-fluid" style=" height: 100%;" src="./assets/Teaching.jpg" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <section class="container-fluid text-center pt-3" style="">
-    <div class="row justify-content-center">
-      <div class="col-xl-9 col-lg-10 col-md-12 py-3">
-        <div class="card shadow text-dark">
-          <div class="card-body">
-            <h2 class="card-title">Educational Services</h2>
-            <p class="card-text">At CPR Plus of Arizona, we have taken pride in delivering exceptional, customized services to
-              meet the diverse needs of our clients <strong>since 2006</strong>. As a licensed provider of Accident Scene Management
-              training, we are committed to ensuring the highest quality of instruction and guidance. Explore the
-              details of our comprehensive offerings below to learn how we can help you achieve your safety and training
-              goals with <strong>Your Class, At Your Facility.</strong></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-12 p-4 d-flex align-items-stretch">
-        <div class="card text-white shadow service-card bg-dark h-100 w-100"
-          style="background-image: url('./assets/instructor\ logo.jpg'); background-size: cover; background-position: center;">
-          <div class="card-body position-relative d-flex flex-column justify-content-between">
-
-            <a href="service1.html" class="btn mt-auto btn-danger">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-6 col-lg-6 col-md-12 p-4 d-flex align-items-stretch">
-        <div class="card text-white shadow service-card bg-dark h-100 w-100"
-          style="background-image: url('./assets/ASM.png'); background-size: cover; z-index: 0; background-position: center;">
-          <div class="card-body position-relative d-flex flex-column justify-content-between" style="z-index: 1;">
-
-            <a href="service2.html" class="btn mt-auto btn-danger">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container text-center pt-3 my-3 card">
-    <div class="row d-flex align-items-center shadow justify-content-center" style="">
-      <div class="col-lg-6 col-sm-12">
-        <img class="image-fluid" src="./assets/new logo.jpg" style="height: 20rem" />
-      </div>
-      <div class="col-lg-6 col-sm-12 p-3">
-        <p>At Cpr Plus of Arizona, we are passionately committed to
-          spreading awareness about the significance of CPR and first
-          aid, and making a positive impact on the communities we serve.
-          We take pride in delivering the most up-to-date and comprehensive
-          training courses that can make a real difference in emergency
-          situations. Our services include community CPR training,
-          healthcare provider BLS certifications, first aid, pet
-          first aid and CPR, as well as bloodborne pathogen education
-          courses. We have also partnered with the Arizona Motorcycle
-          Safety Awareness Foundation to offer their Accident Scene
-          Management Course.</p>
-        <p>We believe that education is the key to ensuring the safety
-          and well-being of individuals, families, and communities. Our
-          experienced instructors are dedicated to providing engaging and
-          effective training programs that equip individuals with the skills
-          and knowledge needed to respond to a range of emergencies.</p>
-        <p>We are honored to serve the residents of Arizona and beyond,
-          and are committed to upholding the highest standards of excellence
-          in all that we do. Thank you for considering Cpr Plus of Arizona
-          for your training needs.</p>
-      </div>
-    </div>
-  </section>
-
-
-
-  <footer class="footer" style="background-color: #343a40; padding: 2rem 0; color: #fff">
-    <div class="container pt-3">
-      <h5 class="text-center mb-4">CPR Plus of AZ</h5>
-      <div class="row d-flex justify-content-evenly">
-        <hr />
-        <div class="col-md-6 col-xs-5 col-lg-6 col-sm-6">
-          <div class="row">
-            <div class="col-md-6 col-lg d-flex flex-column align-items-center">
-              <h5 class="text-center mb-3" style="">Links</h5>
-              <ul class="list-unstyled text-md-start text-center">
-                <li class="d-inline-block">
-                  <a href="#" class="text-white" style="font-size: larger">Home</a>
-                </li>
-                <li class="d-inline-block ml-2">
-                  <a href="#" class="text-white" style="font-size: larger">About</a>
-                </li>
-                <li class="d-inline-block ml-2">
-                  <a href="#" class="text-white" style="font-size: larger">CPR</a>
-                </li>
-                <li class="d-inline-block ml-2">
-                  <a href="#" class="text-white" style="font-size: larger">AMSAF</a>
-                </li>
-              </ul>
+    <div class="container mt-3">
+      <div class="slick-carousel shadow rounded">
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <div
+              class="card image-fluid justify-content-center"
+              style="height: 25rem"
+            >
+              <img
+                class="image-fluid"
+                style="height: 100%"
+                src="./assets/Teaching.jpg"
+              />
             </div>
           </div>
         </div>
-
-        <div class="col-xs-5 col-sm-6 col-md-5 col-lg-6 d-flex justify-content-center align-items-center">
-          <div class="text-center">
-            <h5 class="fs-2 d-flex align-items-center justify-content-center text-align-center text-center"
-              id="contact-footer ">
-              Contact Us
-            </h5>
-            <ul>
-              <p class="smaller-text">
-                <a href="mailto:cpr@email.com?subject = CPR Class Contact">
-                  <i class="fas fa-envelope mr-3"> cpr@email.org</i>
-                </a>
-              </p>
-
-              <p class="smaller-text">
-                <a href="tel:9999999999">
-                  <i class="fa-solid fa-phone mr-3"> (480)999-9999</i>
-                </a>
-              </p>
-            </ul>
-            <div class="row text-center d-flex align-items-center justify-content-center">
-              <i class="fa-brands fa-facebook fa-beat mx-2"></i>
-              <i class="fa-solid fa-envelope fa-beat-fade mx-2"></i>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <div
+              class="card image-fluid justify-content-center"
+              style="height: 25rem"
+            >
+              <img
+                class="image-fluid"
+                style="height: 100%"
+                src="./assets/infant.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <div
+              class="card image-fluid justify-content-center"
+              style="height: 25rem"
+            >
+              <img
+                class="image-fluid"
+                style="height: 100%"
+                src="./assets/Teaching.jpg"
+              />
             </div>
           </div>
         </div>
       </div>
-      <hr />
+    </div>
+
+    <section class="container-fluid text-center pt-3" style="">
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-10 col-md-12 py-3">
+          <div class="card shadow text-dark">
+            <div class="card-body">
+              <h2 class="card-title">Educational Services</h2>
+              <p class="card-text">
+                At CPR Plus of Arizona, we have taken pride in delivering
+                exceptional, customized services to meet the diverse needs of
+                our clients <strong>since 2006</strong>. As a licensed provider
+                of Accident Scene Management training, we are committed to
+                ensuring the highest quality of instruction and guidance.
+                Explore the details of our comprehensive offerings below to
+                learn how we can help you achieve your safety and training goals
+                with <strong>Your Class, At Your Facility.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
-        <div class="col-12 col-md-6 text-center text-md-left">
-          <small>&copy; 2023 Business Name. All rights reserved.</small>
+        <div class="col-xl-6 col-lg-6 col-md-12 p-4 ">
+          <div
+            class="card text-white shadow service-card bg-dark h-100 w-100"
+            style="
+              background-image: url('./assets/instructor\ logo.jpg');
+              background-size: cover;
+              background-position: center;
+              height: 60%;
+            "
+          >
+            <div
+              class="card-body position-relative d-flex flex-column "
+            >
+              <a href="service1.html" class="btn mt-auto btn-danger"
+                >Learn More</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-6 text-center text-md-right">
-          <small><a href="/"> Vested Industries</a> </small>
+        <div class="col-xl-6 col-lg-6 col-md-12 p-4 d-flex ">
+          <div
+            class="card text-white shadow service-card bg-dark h-100 w-100"
+            style="
+              background-image: url('./assets/ASM.png');
+              background-size: cover;
+              z-index: 0;
+              background-position: center;
+            "
+          >
+            <div
+              class="card-body position-relative d-flex flex-column "
+              style="z-index: 1"
+            >
+              <a href="service2.html" class="btn mt-auto btn-danger"
+                >Learn More</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <section class="container text-center pt-3 my-3 card">
+      <div
+        class="row d-flex align-items-center shadow justify-content-center"
+        style=""
+      >
+        <div class="col-lg-6 col-sm-12">
+          <img
+            class="col-12 image-fluid"
+            src="./assets/new logo.jpg"
+            style="height: 20rem"
+          />
+        </div>
+        <div class="col-lg-6 col-sm-12 p-3">
+          <div>
+            <p>
+              At Cpr Plus of Arizona, we are passionately committed to spreading
+              awareness about the significance of CPR and first aid, and making
+              a positive impact on the communities we serve. We take pride in
+              delivering the most up-to-date and comprehensive training courses
+              that can make a real difference in emergency situations. Our
+              services include community CPR training, healthcare provider BLS
+              certifications, first aid, pet first aid and CPR, as well as
+              bloodborne pathogen education courses. We have also partnered with
+              the Arizona Motorcycle Safety Awareness Foundation to offer their
+              Accident Scene Management Course.
+            </p>
+            <p class="collapse" id="collapseText">
+              We believe that education is the key to ensuring the safety and
+              well-being of individuals, families, and communities. Our
+              experienced instructors are dedicated to providing engaging and
+              effective training programs that equip individuals with the skills
+              and knowledge needed to respond to a range of emergencies. <br />
+              We are honored to serve the residents of Arizona and beyond, and
+              are committed to upholding the highest standards of excellence in
+              all that we do. Thank you for considering Cpr Plus of Arizona for
+              your training needs.
+            </p>
+            <a
+              data-mdb-toggle="collapse"
+              href="#collapseText"
+              role="button"
+              aria-expanded="false"
+              aria-contols="collapseText"
+              >Read More</a
+            >
+            
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    $(document).ready(function () {
-      $(".slick-carousel").slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
+    <footer
+      class="footer"
+      style="background-color: #343a40; padding: 2rem 0; color: #fff"
+    >
+      <div class="container">
+        <h5 class="text-center">CPR Plus of AZ</h5>
+        <div class="row d-flex justify-content-evenly">
+          <hr />
+          <div class="col-md-6 col-xs-6 col-sm-6">
+            <div class="row">
+              <div
+                class="col-md-6 d-flex flex-column align-items-center justify-content-center pt-4"
+              >
+                <ul class="list-unstyled text-md-start text-center">
+                  <li class="d-inline-block">
+                    <a href="#" class="text-white" style="font-size: larger"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="d-inline-block ml-2">
+                    <a href="#" class="text-white" style="font-size: larger"
+                      >About</a
+                    >
+                  </li>
+                  <li class="d-inline-block ml-2">
+                    <a href="#" class="text-white" style="font-size: larger"
+                      >CPR</a
+                    >
+                  </li>
+                  <li class="d-inline-block ml-2">
+                    <a href="#" class="text-white" style="font-size: larger"
+                      >ASM</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-xs-6 col-sm-6 col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <div class="text-center">
+              <h5
+                class="fs-2 d-flex align-items-center justify-content-center text-align-center text-center"
+                id="contact-footer "
+              >
+                Contact Us
+              </h5>
+              <ul class="text-center">
+                <p class="smaller-text">
+                  <a href="mailto:cpr@email.com?subject = CPR Class Contact">
+                    <i class="fas fa-envelope mr-3"> cpr@email.org</i>
+                  </a>
+                  <a href="tel:9999999999">
+                    <i class="fa-solid fa-phone mr-3"> (480)999-9999</i>
+                  </a>
+                </p>
+
+                <p class="smaller-text"></p>
+              </ul>
+              <div
+                class="row text-center d-flex align-items-center justify-content-center"
+              >
+                <i class="fa-brands fa-facebook fa-beat mx-2"></i>
+                <i class="fa-solid fa-envelope fa-beat-fade mx-2"></i>
+                <i class="fa-brands fa-instagram fa-beat-fade mx-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12 col-md-6 text-center text-md-left">
+            <small>&copy; 2023 Business Name. All rights reserved.</small>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-right">
+            <small><a href="/"> Vested Industries</a> </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slick-carousel").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+        });
       });
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/e307946eee.js" crossorigin="anonymous"></script>
-</body>
-
+    </script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e307946eee.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
