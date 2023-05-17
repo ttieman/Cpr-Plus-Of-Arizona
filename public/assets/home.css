@@ -5,11 +5,12 @@ nav {
     z-index: 1;
 }
 
-.carousel-item {
-  height: 300px;
+
+@media only screen and  (max-width: 375px) {
+  #footer5 {
+    transform:scale(.7, .7) !important
+  }
 }
-
-
 
 
 
@@ -34,22 +35,11 @@ nav {
   color: #fff;
 }
 
-.footer .smaller-text {
-  font-size: 0.9rem !important;
-  /* Adjust the value as needed */
-}
 
-#contact-footer {
-  font-size: .8rem !important;
-}
 
-.smaller-text {
-  font-size: 2rem !important;
-}
 
-p .smaller-text {
-  font-size: 3rem !important;
-}
+
+
 
 .inline-footer-list {
   display: inline-block !important;
