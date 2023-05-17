@@ -174,7 +174,7 @@ ul.no-bullets li {
               <div
                 class="col-md-6 col-lg d-flex flex-column align-items-center"
               >
-                <h5 class="text-center mb-3" style="">Links</h5>
+                <h5 class="text-center mb-3" >Links</h5>
                 <ul class="list-unstyled text-md-start text-center">
                   <li class="d-inline-block">
                     <a href="#" class="text-white" style="font-size: larger"
@@ -248,24 +248,47 @@ ul.no-bullets li {
     <script src="https://apis.google.com/js/api.js"></script>
     <script type="text/javascript">
       function listUpcomingEvents() {
-        fetch('https://www.googleapis.com/calendar/v3/calendars/8c760bd80cafed7e84398a948b65233a989b8445fb72a0434bfacf8fbd3dd05a@group.calendar.google.com/events?key=AIzaSyBFMV-68_3f0O4EvbcjwrjgEejD_VEksTg')
-        .then(response => response.json())
-        .then(data => {
-          var events = data.items;
-          createDropdown(events);
-        })
-        .catch(error => console.error('Error:', error));
-      }
+        const calendarIds = [
+      '8c760bd80cafed7e84398a948b65233a989b8445fb72a0434bfacf8fbd3dd05a@group.calendar.google.com',
+      '4e264f2702455673b5689ed11b78f5292b40b572971243af5b7c08aca7aaaa9c@group.calendar.google.com'
+    ];
+    const fetchPromises = calendarIds.map(id => 
+      fetch('https://www.googleapis.com/calendar/v3/calendars/' + id + '/events?key=AIzaSyBFMV-68_3f0O4EvbcjwrjgEejD_VEksTg')
+      .then(response => response.json())
+    );
     
-      function createDropdown(events) {
-        var select = document.getElementById('date');
-        events.forEach(function(event) {
-          var option = document.createElement('option');
-          option.value = new Date(event.start.dateTime).toISOString();
-          option.textContent = event.summary + ' (' + new Date(event.start.dateTime).toLocaleString() + ')';
-          select.appendChild(option);
-        });
-      }
+    Promise.all(fetchPromises)
+    .then(dataArray => {
+      var select = document.getElementById('date');
+      
+      // Create the 'N/A' option
+      var firstOption = document.createElement('option');
+      firstOption.value = '';
+      firstOption.textContent = 'N/A';
+      select.appendChild(firstOption);
+
+      dataArray.forEach((data, index) => {
+        var events = data.items;
+        createDropdown(events);
+      });
+    })
+    .catch(error => console.error('Error:', error));
+  }
+
+  function createDropdown(events) {
+    var select = document.getElementById('date');
+    
+    // Create options for each event
+    events.forEach(function(event) {
+      var option = document.createElement('option');
+      var eventDate = new Date(event.start.dateTime);
+      option.value = eventDate.toISOString();
+      option.textContent = `${event.summary} ${eventDate.toLocaleString()}`;
+      select.appendChild(option);
+    });
+  }
+
+      
     
       document.addEventListener('DOMContentLoaded', function() {
         listUpcomingEvents();
