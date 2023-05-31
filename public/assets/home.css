@@ -12,6 +12,14 @@ nav {
   }
 }
 
+@media only screen and  (max-width: 990px) {
+  #footer5 {
+    display: inline-block;
+    transform:scale(.8, .8) !important
+  }
+}
+
+
 
 
 @media (max-width: 1200px) {
@@ -31,7 +39,7 @@ nav {
 
 .footer {
   background-color: #003049!important; 
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: #fff;
 }
 
@@ -80,3 +88,30 @@ a :active {
 
 }
 
+.service-card {
+  max-width: 400px;
+  margin: 0 auto;
+  max-height: 400px;
+  min-height: 22rem;
+}
+
+/* Fix carousel image stretching */
+.carousel-item {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image-container {
+  flex: 1;
+}
+
+.carousel-image-container .card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image-container .card img {
+  height: auto;
+  width: 100%;
+}
