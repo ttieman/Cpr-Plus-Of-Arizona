@@ -1,10 +1,6 @@
 @import url('../node_modules/font-awesome/css/font-awesome.min.css');
 
 
-nav {
-    z-index: 1;
-}
-
 .carousel-item {
   height: 300px;
 }
