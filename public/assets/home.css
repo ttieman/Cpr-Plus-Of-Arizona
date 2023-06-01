@@ -63,7 +63,12 @@ a.effect-shine:hover {
   }
 }
 
-
+@media only screen (min-width: 300px) {
+  burger-btn {
+    display: flex;
+    flex-wrap: nowrap 
+  }
+}
 
 
 .inline-footer-list {
