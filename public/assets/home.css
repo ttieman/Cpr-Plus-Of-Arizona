@@ -95,11 +95,7 @@ a :active {
   min-height: 22rem;
 }
 
-/* Fix carousel image stretching */
-.carousel-item {
-  display: flex;
-  align-items: center;
-}
+
 
 .carousel-image-container {
   flex: 1;
