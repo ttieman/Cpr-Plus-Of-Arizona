@@ -35,10 +35,6 @@
     font-size: 0.9rem !important;
 }
 
-#contact-footer {
-    font-size: .8rem !important;
-}
-
 .inline-footer-list {
     display: inline-block !important;
     margin: 0 1rem !important;
@@ -69,46 +65,59 @@ ul.no-bullets li {
 </head>
 
 <body  style="background-color: #F2F3F4">
-  <nav class="navbar navbar-expand-lg navbar-light navcolor" style="background-color: #003049;">
-    <div class="container-fluid d-flex justify-content-between">
-      <a class="navbar-brand" href="/home">
-        <img src="./assets/logo.png" alt="" width="177" height="44" class="d-inline-block align-text-top">
-        </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNav" >
-        <ul class="navbar-nav ml-auto" >
-          <li class="nav-item">
-            <a class="nav-link " style="color: white" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="color: white" href="/cpr">CPR</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  style="color: white" href="/ASM">Accident Scene</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/about">About</a>
-          </li>
-        </ul>
-      </div>
+  <nav
+  class="navbar navbar-expand-lg navbar-light navcolor"
+  style="background-color: #003049"
+>
+  <div class="container-fluid justify-content-between">
+    <a class="navbar-brand" href="">
+      <img
+        src="./assets/logo.png"
+        alt=""
+        width="177"
+        height="44"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+    <button
+      class="navbar-toggler ml-auto"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" style="color: white" href="/cpr"
+            >CPR</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white" href="/ASM"
+            >Accident Scene Management</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white" href="/about">About</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
     <!-- Header end -->
     <div class="container pt-1">
         <h1 class="text-center mt-5 mb-2">About Us</h1>
         <div class="row d-flex justify-content-md-center">
             <div class="col-12 col-md-9 my-3 p-md-3 mx-md-3 card shadow-sm">
-                <div class="p-3 h-100">
+                <div class="p-3 h-100 text-center">
                     <h2>Our Story</h2>
                     <p>
                         Welcome to CPR Plus of Arizona, an EMT-owned and operated CPR training provider founded by Mark Laclair, a licensed EMT in Arizona and a retired EMT Intermediate and Level 2 Firefighter with over 14 years of experience in Swansey, New Hampshire. Established in 2006, we initially served the community of Cheshire County, and southern New Hampshire before migrating to Arizona in 2015 to expand our reach and continue our mission of bringing life-saving CPR training to communities across the state.</p>
@@ -170,7 +179,7 @@ ul.no-bullets li {
     <div class="outro-section">
         <div class="container">
             <h2 class="text-center">Empower Yourself to Save Lives</h2>
-            <p class="text-center">At CPR Plus of Arizona, we believe that life-saving skills should be accessible to everyone. Our flexible, tailored approach allows us to bring our expertise right to your doorstep. With <strong>Your Class, At Your Facility</strong>, we provide customized CPR training at the location and time most convenient for you, ensuring that individuals, organizations, and communities can confidently respond in emergency situations.</p>
+            <p class="text-center">At CPR Plus of Arizona, we believe that life-saving skills should be accessible to everyone. Our flexible, tailored approach allows us to bring our expertise right to your doorstep. <br /> With <strong>Your Class, At Your Facility</strong>, we provide customized CPR training at the location and time most convenient for you, ensuring that individuals, organizations, and communities can confidently respond in emergency situations.</p>
             <p class="text-center">Join us today and take the first step towards creating a safer environment for yourself and those around you. Together, we can make a difference and save lives.</p>
         </div>
     </div>
@@ -228,14 +237,16 @@ ul.no-bullets li {
               >
                 Contact Us
               </h5>
-              <ul class="text-center " style="padding: 0px; ">
-                <p class=" container " id="footer5" >
-                  
-                  <a href="tel:480-599-9000">
-                    <i class="fa-solid fa-phone mr-3 text-light" > 480-599-9000</i>
-                  </a> <br />
-                  <a  href="mailto:cprfirstaidcert@gmail.com" > <i class="text-light fa-solid fa-envelope mx-2"> cprfirstaidcert@gmail.com </i></a> 
-                </p>
+              <ul class="text-center smaller-text list-unstyled mt-3" style="padding: 0px; ">
+                
+                  <li class="text-light">
+                  <a class="text-light" href="tel:480-599-9000">
+                    <i class="fa-solid fa-phone mr-3" > </i> 480-599-9000
+                  </a> </li> <li>
+                  <a  class="text-light" href="mailto:cprfirstaidcert@gmail.com" > 
+                    <i class="text-light fa-solid fa-envelope mx-2">  </i> cprfirstaidcert@gmail.com
+                  </a> </li>
+                
 
                 
               </ul>

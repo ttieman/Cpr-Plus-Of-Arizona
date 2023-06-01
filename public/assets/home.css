@@ -63,7 +63,12 @@ a.effect-shine:hover {
   }
 }
 
-
+@media only screen (min-width: 300px) {
+  burger-btn {
+    display: flex;
+    flex-wrap: nowrap 
+  }
+}
 
 
 .inline-footer-list {
@@ -95,11 +100,7 @@ a :active {
   min-height: 22rem;
 }
 
-/* Fix carousel image stretching */
-.carousel-item {
-  display: flex;
-  align-items: center;
-}
+
 
 .carousel-image-container {
   flex: 1;
