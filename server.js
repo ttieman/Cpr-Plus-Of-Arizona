@@ -15,6 +15,10 @@ app.get('/ASM', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'AMSAF.html'));
 });
 
+app.get('/affiliates' , (req, res) => {
+ res.sendFile(path.join(__dirname, 'public', 'affiliations.html'));
+});
+
 app.get('/cpr', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'cpr.html'));
 });
