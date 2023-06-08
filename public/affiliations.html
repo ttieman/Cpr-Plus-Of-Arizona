@@ -1,104 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-    
-        <!-- Bootstrap CSS -->
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous"
-        />
-    
-        <link rel="stylesheet" href="./assets/home.css" />
-        
-    
-        <title>CPR Plus of Arizona</title>
-      </head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/home.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        padding-top: 50px;
+      }
+      .affiliate {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+        max-width: 750px;
+      }
+
+      .affiliate:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .affiliate img {
+        width: 150px;
+
+        margin-right: 20px;
+      }
+      .affiliate h2,
+      .affiliate p {
+        margin: 0;
+      }
+    </style>
+
+    <title>CPR Plus of Arizona</title>
+  </head>
+  <body>
     <nav
-    class="navbar navbar-expand-lg navbar-light navcolor"
-    style="background-color: #003049"
-  >
-    <div class="container-fluid d-flex justify-content-between">
-      <a class="navbar-brand" href="">
-        <img
-          src="./assets/logo.png"
-          alt=""
-          width="177"
-          height="44"
-          class="d-inline-block align-text-top"
-        />
-      </a>
-      <button
-        class="navbar-toggler ml-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="color: white" href="/cpr"
-              >CPR</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/ASM"
-              >Accident Scene Management</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/about">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main>
-
-
-
-
-  </main>
-  <footer
-      class="footer"
-      style="background-color: #343a40;  color: #fff"
+      class="navbar navbar-expand-lg navbar-light navcolor"
+      style="background-color: #003049"
     >
+      <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="/home">
+          <img
+            src="./assets/logo.png"
+            alt=""
+            width="177"
+            height="44"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="color: white" href="/cpr"
+                >CPR</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/ASM"
+                >Accident Scene Management</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/about">About</a>
+            </li>
+            <li>
+              <a class="nav-link" style="color: white" href="/affiliates"
+                >Affiliations</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="p-4 container text-center text-align-center">
+      <section class=" ">
+        <div class="row pt-3">
+          <h1 class="mx-auto">Affiliates</h1>
+          <div>
+            <p>
+              Welcome to our Affiliates page. We're excited to establish new
+              relationships with a network of exceptional businesses and
+              institutions. Each one aligns with our goal of promoting CPR
+              services. Explore our affiliates and join us in shaping a safer,
+              healthier community.
+            </p>
+          </div>
+        </div>
+        <div class="row affiliate card mx-auto">
+          <div class="card-title">Business Links</div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://www.breyerlaw.com/images/webp/firm-logo-tablet.webp"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">The Husband & Wife Law Team</h2>
+            <hr />
+            <p>
+              We are your Mobile Detailer that comes to you & saves you time and
+              frustration. Let us do our thing so you can do your thing without
+              interruption.
+            </p>
+            <a href="https://breyerlaw.com">Visit Website</a>
+          </div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://d1fdloi71mui9q.cloudfront.net/GBNgLuqrRHyNen5rJWYP_Bnev7QJZ3wAA7lew"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">ryde-n-shine</h2>
+            <hr />
+            <p>
+              Introducing 'Your Mobile Detailer', our affiliate offering
+              convenient detailing services that come to you, saving you time
+              and hassle, and letting you focus on what matters most
+            </p>
+            <a href="https://www.rydenshine.com">Visit Website</a>
+          </div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://ampdupearpro.com/wp-content/uploads/2021/10/Ampdup_Logo.png"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">Amp'd Up</h2>
+            <hr />
+            <p>
+              Meet 'Amp’d Up Custom Hearing Protection, LLC', our affiliate
+              founded in 2016. They address the critical need for affordable,
+              accessible hearing protection across various occupations and
+              recreational activities.
+            </p>
+            <a class="my-auto" href="https://ampdupearpro.com">Visit Website</a>
+          </div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://scontent.fphx1-2.fna.fbcdn.net/v/t39.30808-6/313432160_1001626381231125_7431574048369891817_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=rc0XEg1BiVEAX-xso1W&_nc_ht=scontent.fphx1-2.fna&oh=00_AfBAOG8XSHJveoctp54X0fMg7kATnXn9bt4TxtrykIZnvQ&oe=648553BE"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">Spice & EZ</h2>
+            <hr />
+            <p>
+              Experience 'Sensory Utopia', our affiliate renowned for
+              high-quality spice blends. They take pride in their distinctive
+              products and outstanding customer service.
+            </p>
+            <a class="my-auto" href="https://ampdupearpro.com">Visit Website</a>
+          </div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://scontent.fphx1-2.fna.fbcdn.net/v/t39.30808-6/300071019_491570852974218_9126133194187575322_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=u87sxuatVngAX_ZXRef&_nc_ht=scontent.fphx1-2.fna&oh=00_AfCAGskBUwwT2EmU29m6Mzp2RPdJCZWBHkQeaXfweluopw&oe=6485487D"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">La Fiesta Catering</h2>
+            <hr />
+            <p>
+              Savor the authenticity with 'La Fiesta Catering', our affiliate
+              offering on-site cooked meats for fresh, flavorful tacos. With
+              over 25 years of experience, they deliver unmatched taste and
+              top-tier customer service
+            </p>
+            <a
+              class="my-auto"
+              href="https://www.facebook.com/lfstreettacos?mibextid=ZbWKwL"
+              >Visit Website</a
+            >
+          </div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="./assets/290979237_7624506794286302_8150581054327495916_n.jpg"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">AZ PS Lethal Threat Brand</h2>
+            <hr />
+            <p>
+              Get to know 'AZ PS', our affiliate and a southwest distributor of
+              Kustom Kulture brands. They bring you unique offerings from Lethal
+              Threat Brand, Lethal Angel Brand, and Down N' Out Brand.
+            </p>
+            <a
+              class="my-auto"
+              href="https://instagram.com/azps2017?igshid=MzRlODBiNWFlZA=="
+              >Visit Website</a
+            >
+          </div>
+
+          <div class="card-title mt-2">Non-Profit</div>
+
+          <div class="affiliate card align-items-center">
+            <img
+              clas="affiliate "
+              src="https://scontent.fphx1-1.fna.fbcdn.net/v/t39.30808-6/327206933_707174494386527_6488343179279008167_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=M3ASehvtcPwAX_vRs1n&_nc_ht=scontent.fphx1-1.fna&oh=00_AfBmFZ4HeuDJjZnKa2RGI4Fh-Z4WpSnmbH9WwVWY-CJO3w&oe=64859F40"
+              alt="Affiliate Name"
+            />
+            <h2 class="mt-3">Down N Durdy</h2>
+            <hr />
+            <p>
+              Meet 'Down N Dirty', a compassionate affiliate providing love,
+              support, and financial assistance to riders following motorcycle
+              accidents
+            </p>
+            <a class="my-auto" href="https://down-n-durdy.org">Visit Website</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" style="background-color: #343a40; color: #fff">
       <div class="container">
-        
         <div class="row d-flex justify-content-evenly">
           <hr />
           <div class="col-md-6 col-xs-6 col-sm-6">
             <div class="row d-flex align-items-center justify-content-center">
-              <h5 class="text-center ">CPR Plus of AZ</h5>
+              <h5 class="text-center">CPR Plus of AZ</h5>
             </div>
             <div class="row d-flex align-items-center justify-content-center">
-              
               <div
                 class="col-md-6 d-flex flex-column align-items-center justify-content-center pt-4"
               >
@@ -109,7 +277,10 @@
                     >
                   </li>
                   <li class="d-inline-block ml-2">
-                    <a href="/about" class="text-white" style="font-size: larger"
+                    <a
+                      href="/about"
+                      class="text-white"
+                      style="font-size: larger"
                       >About</a
                     >
                   </li>
@@ -124,7 +295,9 @@
                     >
                   </li>
                   <li class="d-inline-block ml-2">
-                      <a href="#" class="text-white"style="font-size: larger">Affiliate</a>
+                    <a href="#" class="text-white" style="font-size: larger"
+                      >Affiliate</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -141,25 +314,37 @@
               >
                 Contact Us
               </h5>
-              <ul class="text-center smaller-text list-unstyled mt-3" style="padding: 0px; ">
-                
-                  <li class="text-light">
+              <ul
+                class="text-center smaller-text list-unstyled mt-3"
+                style="padding: 0px"
+              >
+                <li class="text-light">
                   <a class="text-light" href="tel:480-599-9000">
-                    <i class="fa-solid fa-phone mr-3" > </i> 480-599-9000
-                  </a> </li> <li>
-                  <a  class="text-light" href="mailto:cprfirstaidcert@gmail.com" > 
-                    <i class="text-light fa-solid fa-envelope mx-2">  </i> cprfirstaidcert@gmail.com
-                  </a> </li>
-                
-
-                
+                    <i class="fa-solid fa-phone mr-3"> </i> 480-599-9000
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light" href="mailto:cprfirstaidcert@gmail.com">
+                    <i class="text-light fa-solid fa-envelope mx-2"> </i>
+                    cprfirstaidcert@gmail.com
+                  </a>
+                </li>
               </ul>
               <div
-                class="row text-center d-flex align-items-center justify-content-center "
+                class="row text-center d-flex align-items-center justify-content-center"
               >
-                <a href="https://www.facebook.com/cprandfirstaidclass" class=" text-light fa-brands fa-facebook fa-beat mx-2"></a>
-                <a href="mailto:cprfirstaidcert@gmail.com"class=" text-light fa-solid fa-envelope fa-beat-fade mx-2"></a>
-                <a  class="fa-brands fa-instagram fa-beat-fade mx-2 text-light"href="https://www.instagram.com/cprplusofarizona"/>
+                <a
+                  href="https://www.facebook.com/cprandfirstaidclass"
+                  class="text-light fa-brands fa-facebook fa-beat mx-2"
+                ></a>
+                <a
+                  href="mailto:cprfirstaidcert@gmail.com"
+                  class="text-light fa-solid fa-envelope fa-beat-fade mx-2"
+                ></a>
+                <a
+                  class="fa-brands fa-instagram fa-beat-fade mx-2 text-light"
+                  href="https://www.instagram.com/cprplusofarizona"
+                >
                 </a>
               </div>
             </div>
@@ -170,33 +355,41 @@
           <div class="col-12 col-md-6 text-center text-md-left">
             <small>&copy; 2023 Business Name. All rights reserved.</small>
           </div>
-          <div class="col-12 col-md-6 text-center  text-light text-md-right">
-            <small ></i><a class="text-light no-ul effect-shine" href="/"><i class="fa-brands fa-react fa-spin fa-spin-reverse" style="color: #f990f6;"></i> Vested Industries</a> </small>
+          <div class="col-12 col-md-6 text-center text-light text-md-right">
+            <small
+              ><a class="text-light no-ul effect-shine" href="/"
+                ><i
+                  class="fa-brands fa-react fa-spin fa-spin-reverse"
+                  style="color: #f990f6"
+                ></i>
+                Vested Industries</a
+              >
+            </small>
           </div>
         </div>
       </div>
     </footer>
-     <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://kit.fontawesome.com/e307946eee.js"
-    crossorigin="anonymous"
-  ></script>
-</body>
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e307946eee.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
