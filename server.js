@@ -27,13 +27,10 @@ app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
-// send the user to index html page inspite of the url
-app.get(`/home`, (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'home.html'));
-});
+
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
 
