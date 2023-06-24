@@ -285,26 +285,26 @@ ul.no-bullets li {
       
     
       document.addEventListener('DOMContentLoaded', function() {
-        listUpcomingEvents();
-    
+        
+      
         const form = document.getElementById('contact-form');
-    
+      
         if (form) {
           form.addEventListener('submit', function(event) {
             event.preventDefault();
-    
+      
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             const date = document.getElementById('date').value;
-    
+      
             if (!name || !email || !message || !date) {
               alert("Please fill in all fields before submitting.");
               return;
             }
     
             emailjs.init("GvWp1giDLQJTZaPPV");
-            emailjs.send("service_8sxnbni", "template_s86hnvq", {
+            emailjs.send("service_zxl0azr", "template_s86hnvq", {
               name: name,
               email: email,
               date: date,
@@ -313,7 +313,7 @@ ul.no-bullets li {
             .then(function(response) {
               console.log('Email successfully sent!', response);
               alert("Email successfully sent!");
-    
+      
               document.getElementById('name').value = '';
               document.getElementById('email').value = '';
               document.getElementById('message').value = '';
