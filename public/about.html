@@ -145,9 +145,7 @@ ul.no-bullets li {
                   </div>
                   <div class="form-group">
                     <label for="date">Desired Class Date</label>
-                    <select class="form-control" id="date">
-                      <!-- Options will be populated here by the script -->
-                    </select>
+                    <input type="date" class="form-control" id="date">
                   </div>
                   <div class="form-group">
                     <label for="message">Message</label>
@@ -280,48 +278,10 @@ ul.no-bullets li {
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
-    <script type="text/javascript">
-      function listUpcomingEvents() {
-        const calendarIds = [
-      '8c760bd80cafed7e84398a948b65233a989b8445fb72a0434bfacf8fbd3dd05a@group.calendar.google.com',
-      '4e264f2702455673b5689ed11b78f5292b40b572971243af5b7c08aca7aaaa9c@group.calendar.google.com'
-    ];
-    const fetchPromises = calendarIds.map(id => 
-      fetch('https://www.googleapis.com/calendar/v3/calendars/' + id + '/events?key=AIzaSyBFMV-68_3f0O4EvbcjwrjgEejD_VEksTg')
-      .then(response => response.json())
-    );
-    
-    Promise.all(fetchPromises)
-    .then(dataArray => {
-      var select = document.getElementById('date');
-      
-      // Create the 'N/A' option
-      var firstOption = document.createElement('option');
-      firstOption.value = '';
-      firstOption.textContent = 'N/A';
-      select.appendChild(firstOption);
-
-      dataArray.forEach((data, index) => {
-        var events = data.items;
-        createDropdown(events);
-      });
-    })
-    .catch(error => console.error('Error:', error));
-  }
-
-  function createDropdown(events) {
-    var select = document.getElementById('date');
-    
-    // Create options for each event
-    events.forEach(function(event) {
-      var option = document.createElement('option');
-      var eventDate = new Date(event.start.dateTime);
-      option.value = eventDate.toISOString();
-      option.textContent = `${event.summary} ${eventDate.toLocaleString()}`;
-      select.appendChild(option);
-    });
-  }
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script>
       
     
       document.addEventListener('DOMContentLoaded', function() {
