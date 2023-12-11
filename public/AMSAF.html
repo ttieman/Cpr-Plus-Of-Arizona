@@ -173,7 +173,38 @@
       </div>
     </section>
 
-    <footer
+    <section>
+      <div class="card-deck">
+
+        
+        <div class="card" style="width: 26rem;">
+          <img class="card-img-top" src="./assets/amsaf course completion/September 24, 2023.png" alt="Card image cap">
+          <div class="card-body">
+            
+            <p class="card-text">Accident Scene Management Class September 24, 2023 Scorpion Harley-Davidson, Chandler, AZ</p>
+            
+          </div>
+        </div>
+        <div class="card" style="width: 26rem;">
+          <img class="card-img-top" src="./assets/amsaf course completion/October 29, 2023.png" alt="Card image cap">
+          <div class="card-body">
+            
+            <p class="card-text">Accident Scene Management Class October 29, 2023 Desert Wind Harley-Davidson Mesa, AZ</p>
+            
+          </div>
+        </div>
+        <div class="card" style="width: 26rem;">
+          <img class="card-img-top" src="./assets/amsaf course completion/November 19, 2023.png" alt="Card image cap">
+          <div class="card-body">
+           
+            <p class="card-text">Accident Scene Management Class November 19, 2023 Desert Wind Harley-Davidson Mesa, AZ</p>
+            
+          </div>
+        </div>
+      </div>
+      </section>
+      
+      <footer
       class="footer"
       style="background-color: #343a40;  color: #fff"
     >
@@ -286,6 +317,46 @@
   <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
-  ></script>
+  ></script> <style>
+    .card-deck .card {
+      justify-content: center;
+      flex: 1;
+      margin: 15px;
+    }
+    .card-deck{
+      margin-top: 5%;
+      margin-bottom:5%;
+    }
+
+   .card-body{
+    display:flex;
+    
+    
+    justify-content: center;
+    align-items: center;
+   }
+    
+    .card-img-top {
+      width: 100%;
+      height: auto; /* Adjust as needed */
+      object-fit:contain;
+    }
+    
+    @media (max-width: 768px) {
+      .card{
+        margin-left: auto;
+        margin-right:auto;
+        width:75%
+      }
+      .card-deck {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+      }
+    }
+    
+  </style>
   </body>
 </html>
